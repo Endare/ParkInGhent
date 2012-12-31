@@ -10,3 +10,17 @@ arm/o.le-v7-g/ParkingsGent
 assets/.DS_Store
 
 .DS_Store
+
+arm/o.le-v7/.moc/moc_ParkingsGent.cpp
+
+*.0
+
+*.so
+
+*.1
+
+*.bar
+
+arm/o.le-v7/.obj/ParkingsGent.gch/c++
+
+*.sym
