@@ -1,0 +1,12 @@
+
+arm/o.le-v7-g/.moc/moc_ParkingsGent.cpp
+
+arm/o.le-v7-g/.obj/ParkingsGent.gch/c++
+
+*.o
+
+arm/o.le-v7-g/ParkingsGent
+
+assets/.DS_Store
+
+.DS_Store
