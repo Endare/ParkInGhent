@@ -31,6 +31,10 @@
         <source>Geef route weer</source>
         <translation>View route to</translation>
     </message>
+    <message>
+        <source>Er zijn nog %1 parkeerplaatsen vrij in Parking %2.</source>
+        <translation>There are %1 available parking spots at Parking %2 in Ghent. This is information was brought to you by the Parking In Ghent app.</translation>
+    </message>
 </context>
 <context>
     <name>ParkingsGent</name>

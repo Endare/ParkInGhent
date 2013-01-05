@@ -31,6 +31,10 @@
         <source>Geef route weer</source>
         <translation>Geef route weer</translation>
     </message>
+    <message>
+        <source>Er zijn nog %1 parkeerplaatsen vrij in Parking %2.</source>
+        <translation>Er zijn nog %1 parkeerplaatsen vrij in Parking %2 in Gent. Deze informatie werd u aangeleverd via de Park In Ghent app.</translation>
+    </message>
 </context>
 <context>
     <name>ParkingsGent</name>
