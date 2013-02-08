@@ -66,7 +66,7 @@ NavigationPane {
 		        // that we can set the data model from C++.
 		        ListView {
 		            id: parkingListView
-		            objectName: "list"
+		            objectName: "parkingListView"
 		            verticalAlignment: VerticalAlignment.Center
 		            horizontalAlignment: HorizontalAlignment.Center
 		                         
@@ -170,7 +170,7 @@ NavigationPane {
 	onTopChanged: {
 	    if(page == parkingList) 
 	    {
-            list.clearSelection();
+            parkingListView.clearSelection();
         }
     }
         

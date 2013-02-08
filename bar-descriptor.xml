@@ -74,28 +74,28 @@
     <!--  The category where the application appears. Either core.games or core.media. -->
     <category>core.media</category>
     <splashScreens>
-       <image>assets/splash-en.png</image>
-       <image>assets/splash-en-720x720.png</image>
+       <image>assets/artwork/splash-en.png</image>
+       <image>assets/artwork/splash-en-720x720.png</image>
        <image>
-          <text xml:lang="en">assets/splash-en.png</text>
+          <text xml:lang="en">assets/artwork/splash-en.png</text>
        </image>
        <image>
-          <text xml:lang="en">assets/splash-en-720x720.png</text>
+          <text xml:lang="en">assets/artwork/splash-en-720x720.png</text>
        </image>
        <image>
-          <text xml:lang="nl">assets/splash-nl.png</text>
+          <text xml:lang="nl">assets/artwork/splash-nl.png</text>
        </image>
        <image>
-          <text xml:lang="nl">assets/splash-nl-720x720.png</text>
+          <text xml:lang="nl">assets/artwork/splash-nl-720x720.png</text>
        </image>
     </splashScreens>
     <icon>
-       <image>assets/icon-en.png</image>
+       <image>assets/artwork/icon-en.png</image>
        <image>
-          <text xml:lang="en">assets/icon-en.png</text>
+          <text xml:lang="en">assets/artwork/icon-en.png</text>
        </image>
        <image>
-          <text xml:lang="nl">assets/icon-nl.png</text>
+          <text xml:lang="nl">assets/artwork/icon-nl.png</text>
        </image>
     </icon>
     <configuration name="Device-Debug">

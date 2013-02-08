@@ -22,7 +22,7 @@ Page {
                 scalingMethod: ScalingMethod.AspectFit
             }
             Label {
-                text: _parkingView.description
+                text: parkingViewVar.description
                 textStyle {
                      base: SystemDefaults.TextStyles.BigText
                      color: Color.White   
@@ -44,7 +44,7 @@ Page {
                 textStyle.base: parkingDetailTitle.style
             }
             Label {
-                text: _parkingView.openingHours
+                text: parkingViewVar.openingHours
                 verticalAlignment: VerticalAlignment.Top
                 horizontalAlignment: HorizontalAlignment.Right  
                 textStyle.base: parkingDetailContent.style 
@@ -56,7 +56,7 @@ Page {
                 textStyle.base: parkingDetailTitle.style
             }
             Label {
-                text: _parkingView.open
+                text: parkingViewVar.open
                 verticalAlignment: VerticalAlignment.Bottom
                 horizontalAlignment: HorizontalAlignment.Right   
                 textStyle.base: parkingDetailContent.style 
@@ -75,7 +75,7 @@ Page {
                 textStyle.base: parkingDetailTitle.style
             }
             Label {
-                text: _parkingView.totalCapacity
+                text: parkingViewVar.totalCapacity
                 verticalAlignment: VerticalAlignment.Top
                 horizontalAlignment: HorizontalAlignment.Right  
                 textStyle.base: parkingDetailContent.style 
@@ -87,7 +87,7 @@ Page {
                 textStyle.base: parkingDetailTitle.style
             }
             Label {
-                text: _parkingView.availableCapacity
+                text: parkingViewVar.availableCapacity
                 verticalAlignment: VerticalAlignment.Bottom
                 horizontalAlignment: HorizontalAlignment.Right  
                 textStyle.base: parkingDetailContent.style 
@@ -107,7 +107,7 @@ Page {
                 textStyle.base: parkingDetailTitle.style
             }
             Label {
-                text: _parkingView.address
+                text: parkingViewVar.address
                 multiline: true
                 verticalAlignment: VerticalAlignment.Top
                 horizontalAlignment: HorizontalAlignment.Right 
@@ -116,22 +116,28 @@ Page {
         }
     }
     actions: [
-        ActionItem {
-            title: qsTr("Bekijk op kaart")
-            ActionBar.placement: ActionBarPlacement.InOverflow
-            imageSource: "asset:///images/map.png"
-        },
-        ActionItem {
-	        title: qsTr("Geef route weer")
-	        ActionBar.placement: ActionBarPlacement.InOverflow
-            imageSource: "asset:///images/route.png"
-	    },
+//        ActionItem {
+//            title: qsTr("Bekijk op kaart")
+//            ActionBar.placement: ActionBarPlacement.InOverflow
+//            imageSource: "asset:///images/map.png"
+//            onTriggered: {
+//                mapInvoker.go();
+//            }
+//        },
+//        ActionItem {
+//	        title: qsTr("Geef route weer")
+//	        ActionBar.placement: ActionBarPlacement.InOverflow
+//            imageSource: "asset:///images/route.png"
+//            onTriggered: {
+//                routeInvoker.go();
+//            }
+//        },
 	    InvokeActionItem {
             id: invoke
             query {
                 mimeType: "text/plain"
                 invokeActionId: "bb.action.SHARE"
-                data: qsTr("Er zijn nog %1 parkeerplaatsen vrij in Parking %2.").arg(_parkingView.availableCapacity).arg(_parkingView.description)
+                data: qsTr("Er zijn nog %1 parkeerplaatsen vrij in Parking %2.").arg(parkingViewVar.availableCapacity).arg(parkingViewVar.description)
             }
         }
     ]
@@ -148,19 +154,19 @@ Page {
         },
         RouteMapInvoker {
             id: routeInvoker
-            endLatitude: _parkingView.latitude;
-            endLongitude: _parkingView.longitude;
-            endName: _parkingView.address
-            endDescription: "Parking " + _parkingView.description
+            endLatitude: parkingViewVar.latitude;
+            endLongitude: parkingViewVar.longitude;
+            endName: parkingViewVar.address
+            endDescription: "Parking " + parkingViewVar.description
         },
         LocationMapInvoker {
             id: mapInvoker
-            centerLatitude: _parkingView.latitude;
-            centerLongitude: _parkingView.longitude;
+            centerLatitude: parkingViewVar.latitude;
+            centerLongitude: parkingViewVar.longitude;
             altitude: 200
-            locationLatitude: _parkingView.latitude;
-            locationLongitude: _parkingView.longitude;
-            locationName: "Parking " + _parkingView.description
+            locationLatitude: parkingViewVar.latitude;
+            locationLongitude: parkingViewVar.longitude;
+            locationName: "Parking " + parkingViewVar.description
         }
     ]
 }
