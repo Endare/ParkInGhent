@@ -3,8 +3,8 @@ import bb.system 1.0
 
 NavigationPane {
     id: navigationPane
-    property variant _parkingView
-    property variant _inDetail
+    property variant parkingViewVar
+    property variant inDetailVar
     Menu.definition: MenuDefinition {
 	    actions: [
 	        // An action item that calls the C++ function that retrieves
@@ -12,7 +12,7 @@ NavigationPane {
 	        ActionItem {
 	            title: qsTr("Vernieuw")
 	            onTriggered: {
-	                if(_inDetail)
+	                if(inDetailVar)
 	                {
 	                    navigationPane.pop();
 	                }
@@ -65,7 +65,7 @@ NavigationPane {
 		        // and one for contact names. The list has an object name so
 		        // that we can set the data model from C++.
 		        ListView {
-		            id: "list"
+		            id: parkingListView
 		            objectName: "list"
 		            verticalAlignment: VerticalAlignment.Center
 		            horizontalAlignment: HorizontalAlignment.Center
@@ -132,14 +132,14 @@ NavigationPane {
                     onTriggered: {
                         select(indexPath);
                         var page = parkingDetails.createObject();
-                        _inDetail = true;
+                        inDetailVar = true;
                         navigationPane.push(page);
                     }
                     
                     onSelectionChanged: {
                         if (selected) 
                         {
-                            _parkingView = dataModel.data(indexPath);
+                            parkingViewVar = dataModel.data(indexPath);
                         }
                     }
 		        }
@@ -176,6 +176,6 @@ NavigationPane {
         
     onPopTransitionEnded: {
         page.destroy();
-        _inDetail = false;
+        inDetailVar = false;
     }
 }

@@ -23,7 +23,7 @@ ParkingsGent::ParkingsGent(bb::cascades::Application *app)
 
     // Retrieve the activity indicator and listview so we can configure them from the C++ code
     actIndicator = root->findChild<ActivityIndicator*>("indicator");
-    listView = root->findChild<ListView*>("list");
+    listView = root->findChild<ListView*>("parkingListView");
 
     //Create and configure the network access manager for retrieving the data
     networkManager = new QNetworkAccessManager(this);

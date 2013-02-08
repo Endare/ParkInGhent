@@ -39,7 +39,7 @@
     <!-- A string value of the format <0-999>.<0-999>.<0-999> that represents application version which can be used to check for application upgrade. 
          Values can also be 1-part or 2-part. It is not necessary to have a 3-part value.
          An updated version of application must have a versionNumber value higher than the previous version. Required. -->
-    <versionNumber>1.0.0</versionNumber>
+    <versionNumber>1.0.1</versionNumber>
     <packageLocale>en,nl</packageLocale>
 
     <!-- Fourth digit segment of the package version. First three segments are taken from the 
@@ -74,35 +74,28 @@
     <!--  The category where the application appears. Either core.games or core.media. -->
     <category>core.media</category>
     <splashScreens>
-       <image>splash-en.png</image>
+       <image>assets/splash-en.png</image>
+       <image>assets/splash-en-720x720.png</image>
        <image>
-          <text xml:lang="en">splash-en.png</text>
+          <text xml:lang="en">assets/splash-en.png</text>
        </image>
        <image>
-          <text xml:lang="nl">splash-nl.png</text>
-       </image>
-       <image>splash-en-720.png</image>
-       <image>splash-en-720x720.png</image>
-       <image>
-          <text xml:lang="en">splash-en-720x720.png</text>
+          <text xml:lang="en">assets/splash-en-720x720.png</text>
        </image>
        <image>
-          <text xml:lang="en">splash-en-720.png</text>
+          <text xml:lang="nl">assets/splash-nl.png</text>
        </image>
        <image>
-          <text xml:lang="nl">splash-nl-720.png</text>
-       </image>
-       <image>
-          <text xml:lang="nl">splash-nl-720x720.png</text>
+          <text xml:lang="nl">assets/splash-nl-720x720.png</text>
        </image>
     </splashScreens>
     <icon>
-       <image>icon-en.png</image>
+       <image>assets/icon-en.png</image>
        <image>
-          <text xml:lang="en">icon-en.png</text>
+          <text xml:lang="en">assets/icon-en.png</text>
        </image>
        <image>
-          <text xml:lang="nl">icon-en.png</text>
+          <text xml:lang="nl">assets/icon-nl.png</text>
        </image>
     </icon>
     <configuration name="Device-Debug">
@@ -131,14 +124,6 @@
     <asset path="translations" dest="qm">
         <include name="*.qm"/>
     </asset>
-    <asset path="icon-en.png">icon-en.png</asset>
-    <asset path="icon-nl.png">icon-nl.png</asset>
-    <asset path="splash-en.png">splash-en.png</asset>
-    <asset path="splash-nl.png">splash-nl.png</asset>
-    <asset path="splash-en-720.png">splash-en-720.png</asset>
-    <asset path="splash-en-720x720.png">splash-en-720x720.png</asset>
-    <asset path="splash-nl-720.png">splash-nl-720.png</asset>
-    <asset path="splash-nl-720x720.png">splash-nl-720x720.png</asset>
     
     <!-- Request permission to execute native code.  Required for native applications. -->
     <permission system="true">run_native</permission>
