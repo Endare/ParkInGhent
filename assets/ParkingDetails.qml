@@ -116,22 +116,22 @@ Page {
         }
     }
     actions: [
-//        ActionItem {
-//            title: qsTr("Bekijk op kaart")
-//            ActionBar.placement: ActionBarPlacement.InOverflow
-//            imageSource: "asset:///images/map.png"
-//            onTriggered: {
-//                mapInvoker.go();
-//            }
-//        },
-//        ActionItem {
-//	        title: qsTr("Geef route weer")
-//	        ActionBar.placement: ActionBarPlacement.InOverflow
-//            imageSource: "asset:///images/route.png"
-//            onTriggered: {
-//                routeInvoker.go();
-//            }
-//        },
+        ActionItem {
+            title: qsTr("Bekijk op kaart")
+            ActionBar.placement: ActionBarPlacement.InOverflow
+            imageSource: "asset:///images/map.png"
+            onTriggered: {
+                mapInvoker.go();
+            }
+        },
+        ActionItem {
+	        title: qsTr("Geef route weer")
+	        ActionBar.placement: ActionBarPlacement.InOverflow
+            imageSource: "asset:///images/route.png"
+            onTriggered: {
+                routeInvoker.go();
+            }
+        },
 	    InvokeActionItem {
             id: invoke
             query {
@@ -154,10 +154,8 @@ Page {
         },
         RouteMapInvoker {
             id: routeInvoker
-            endLatitude: parkingViewVar.latitude;
-            endLongitude: parkingViewVar.longitude;
-            endName: parkingViewVar.address
-            endDescription: "Parking " + parkingViewVar.description
+            endLatitude: parkingViewVar.latitude
+            endLongitude: parkingViewVar.longitude
         },
         LocationMapInvoker {
             id: mapInvoker
